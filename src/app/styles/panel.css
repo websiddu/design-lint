@@ -1,0 +1,264 @@
+.panel {
+  height: 100%;
+  width: 320px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  z-index: 10;
+  background: #fff;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 8px 0 16px rgba(0, 0, 0, 0.16);
+}
+
+.panel__header {
+  display: flex;
+  align-content: center;
+  padding: 8px 12px 8px 8px;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+.panel__action {
+  margin-right: 8px;
+}
+
+.panel__title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.is-visible {
+  transform: translateX(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  height: 100%;
+  width: 100%;
+  animation: fadeIn 250ms;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.error-label {
+  color: #fe6262;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.errors-list {
+  margin: 0;
+  padding: 0 16px 16px;
+}
+
+.error-list-item {
+  padding: 16px;
+  border: 1px solid #e5e5e5;
+  color: #333333;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.flex-row {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+.label {
+  font-size: 12px;
+  color: #9f9f9f;
+  font-weight: 400;
+  margin: 8px 0 2px;
+}
+
+.current-value {
+  margin-top: 6px;
+  width: 100%;
+  color: #333;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.error-type {
+  margin-right: 12px;
+  align-self: center;
+}
+
+.error-description {
+  align-self: center;
+}
+
+.error-type img {
+  height: 13px;
+  width: 13px;
+}
+
+.context-icon {
+  align-self: flex-end;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.success-message {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 13px;
+  padding: 40px 0;
+  margin: 16px;
+  margin-top: 0;
+  color: #333;
+}
+
+.success-shape {
+  background-color: #18a0fb;
+  border-radius: 80px;
+  height: 64px;
+  width: 64px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.success-icon {
+  margin: auto;
+  height: 32px;
+  width: 32px;
+}
+
+.react-contextmenu {
+  background: #2c2c2c;
+  border-radius: 4px;
+  box-shadow: 0 6px 11px rgba(0, 0, 0, 0.11);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.react-contextmenu-item {
+  padding: 8px 32px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  transition: 150ms ease;
+}
+
+.react-contextmenu-item:hover {
+  background-color: #18a0fb;
+  border-radius: 4px;
+}
+
+.button-wrapper {
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-top: auto;
+  width: calc(100% - 32px);
+  display: flex;
+  flex-flow: row;
+  padding: 16px;
+}
+
+.button {
+  box-shadow: none;
+  border: none;
+  background-color: #fff;
+  padding: 12px 16px;
+  margin: 0;
+  border-radius: 6px;
+  color: #333;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  transition: border-color 150ms ease;
+  font-size: 12px;
+}
+
+.button--next {
+  margin-left: 16px;
+}
+
+.button--prev {
+  margin-right: 6px;
+}
+
+.button--disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.button:active {
+  border-color: #333;
+}
+
+.settings-wrapper {
+  padding: 4px 16px 16px;
+}
+
+.settings-row {
+  margin-bottom: 24px;
+}
+
+.settings-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  padding-bottom: 8px;
+}
+
+.settings-label {
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #333333;
+  padding-bottom: 12px;
+}
+
+.settings-input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 2px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.settings-input:focus {
+  border: 1px solid #18a0fb;
+  border-radius: 2px;
+}

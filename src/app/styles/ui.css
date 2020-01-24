@@ -1,0 +1,167 @@
+body {
+  font: 11px sans-serif;
+  font-family: system-ui;
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  border-radius: 6px;
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  box-shadow: inset 0 0 0 1px black;
+  outline: none;
+}
+
+button:hover {
+  background: #eee;
+}
+
+#create {
+  box-shadow: none;
+  background: #18a0fb;
+  color: #fff;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100vh;
+}
+
+.list {
+  flex: 1 0 40%;
+  margin: 0;
+  padding: 0;
+  -webkit-padding-start: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.list-arrow {
+  height: 32px;
+  width: 16px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.list-arrow-icon {
+  opacity: 0;
+  transition: opacity 50ms ease;
+  transform: rotate(-90deg);
+}
+
+.list-item {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.list-item ul {
+  display: none;
+}
+
+.list-item--selected > .list-flex-row {
+  background: #daebf7;
+}
+
+.list-item--selected ul {
+  background: #edf5fa;
+}
+
+.list-item--active > ul {
+  display: block;
+}
+
+.list-item--active > div > .list-arrow > .list-arrow-icon {
+  transform: rotate(0deg);
+}
+
+.list-flex-row {
+  height: 32px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid transparent;
+  transition: border-color 100ms ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.error-count {
+  position: absolute;
+  top: 6px;
+  right: 16px;
+  background: #fe6262;
+  color: #fff;
+  height: 16px;
+  min-width: 16px;
+  padding: 2px;
+  border-radius: 32px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.child-error-count {
+  position: absolute;
+  content: "";
+  right: 23px;
+  background: #fe6262;
+  color: #333333;
+  height: 2px;
+  min-width: 2px;
+  padding: 2px;
+  border-radius: 50%;
+  line-height: 16px;
+  text-align: center;
+}
+
+.list-flex-row:hover {
+  border-color: #18a0fb;
+}
+
+.list-flex-row:hover .list-arrow-icon {
+  opacity: 1;
+}
+
+.list-icon {
+  text-align: center;
+  width: 16px;
+  opacity: 0.6;
+}
+
+.list-icon img {
+  height: 12px;
+  width: 12px;
+}
+
+.list-name {
+  margin: 0 8px;
+  font-size: 12px;
+}
+
+.sub-list {
+  width: calc(100% - 24px);
+  margin: 0;
+  -webkit-padding-start: 0;
+  padding: 0 0 0 24px;
+}
+
+.frame {
+  font-weight: 400;
+}
+
+.list-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
